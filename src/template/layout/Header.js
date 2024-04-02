@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCaretUp, faMagnifyingGlass, faShoppingCart, faUser } from "@fortawesome/free-solid-svg-icons";
 const $ = document.querySelector.bind(document);
 // const $$ = document.querySelectorAll.bind(document);
 
@@ -45,25 +47,49 @@ function Header()
           <div className="text-center" style={{backgroundColor:"black"}}>
             <p className="titleHeader text-white">Hotline mua hàng : 0384631254</p>
           </div>
+          <div className="row mb-3" style={{marginLeft: "300px"}}>
+            <div className="col-md-9 text-center">  
+              <Link to="/">
+              <img alt="Logo" src="https://file.hstatic.net/1000096703/file/logo_website__191___70_px__979fdef210f7474d8a09b42724033b5c.png" />
+              </Link>
+            </div>
+            <div className="col-md-3">
+              <div className="mt-3">
+                <Link className="btn" to="/"><FontAwesomeIcon icon={faUser} /></Link> 
+                <Link className="btn" to="/"><FontAwesomeIcon icon={faMagnifyingGlass} /></Link> 
+                <Link className="btn" to="/"><FontAwesomeIcon icon={faShoppingCart} /></Link> 
+              </div>
+            </div>
+          </div>
           <nav className="navbar navbar-expand-lg bg-body-tertiary">
         <div className="container-fluid">
-          <Link className="navbar-brand" to="/">Navbar</Link>
-          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span className="navbar-toggler-icon"></span>
-          </button>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-              <li className="nav-item">
-                <Link className="nav-link active" aria-current="page" to="/">Home</Link>
+            <ul className="navbar-nav m-auto">
+              <li className="nav-item item-menu">
+                <Link className="nav-link fw-bold m-2" aria-current="page" to="/">Áo khoác <FontAwesomeIcon className="iconMenu" icon={faCaretUp} /></Link>
               </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="/product">Product</Link>
+              <li className="nav-item item-menu">
+                <Link className="nav-link fw-bold m-2" to="/product">Áo thun <FontAwesomeIcon className="iconMenu" icon={faCaretUp} /></Link>
+              </li>
+              <li className="nav-item item-menu">
+                <Link className="nav-link fw-bold m-2" to="/product">Sơ mi <FontAwesomeIcon className="iconMenu" icon={faCaretUp} /></Link> 
+              </li>
+              <li className="nav-item item-menu">
+                <Link className="nav-link fw-bold m-2" to="/product">Quần dài <FontAwesomeIcon className="iconMenu" icon={faCaretUp} /></Link>
+              </li>
+              <li className="nav-item item-menu">
+                <Link className="nav-link fw-bold m-2" to="/product">Quần short <FontAwesomeIcon className="iconMenu" icon={faCaretUp} /></Link>
+              </li>
+              <li className="nav-item item-menu">
+                <Link className="nav-link fw-bold m-2" to="/product">Phụ kiên <FontAwesomeIcon className="iconMenu" icon={faCaretUp} /></Link>
+              </li>
+              <li className="nav-item item-menu">
+                <Link className="nav-link fw-bold m-2" to="/product">All</Link>
+              </li>
+              <li className="nav-item item-menu">
+                <Link className="nav-link fw-bold m-2" to="/product">SALE</Link>
               </li>
             </ul>
-            <form className="d-flex" role="search">
-              <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"></input>
-              <button className="btn btn-outline-success" type="submit">Search</button>
-            </form>
           </div>
         </div>
       </nav>
