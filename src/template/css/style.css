@@ -1,7 +1,0 @@
-.item-menu:hover .iconMenu{
-    transform: rotate(180deg);
-    transition: 0.4s;
-}
-.item-menu:hover{
-    box-shadow: 2px 2px 1px 1px #cdcdcd;
-}

@@ -1,0 +1,20 @@
+{
+  "clothers": [
+    {
+      "id": 1,
+      "name": "Áo unisex",
+      "size": "freesize",
+      "material": "coton",
+      "image": "https://tse4.mm.bing.net/th?id=OIP.7ZxepcJaDNoUZqs3JZPxKwHaHa&pid=Api&P=0&h=220",
+      "description": "áo này thoáng mát, rộng rãi"
+    },
+    {
+      "id": 3,
+      "name": "Áo brand",
+      "size": "freesize",
+      "material": "coton",
+      "image": "https://tse2.mm.bing.net/th?id=OIP.RFMURAnl7cXNVNb1-gmt1AHaJI&pid=Api&P=0&h=220",
+      "description": "áo này thoáng mát, rộng rãi"
+    }
+  ]
+}
