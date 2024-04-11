@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
-import { useEffect,useState } from "react";
-import { Routes,Route } from 'react-router-dom';
+import { Fragment, useEffect,useState } from "react";
 import axios from "axios";
 import React from "react"
+import Banner from "../layout/Banner";
 
 function Dashboard()
 {
@@ -20,8 +20,11 @@ function Dashboard()
     },[])
 
     return (
+        <Fragment>
+            <Banner />
             <div className="main">
                 <h1 className="p-3" style={{textShadow: '2px 2px #cdcdcd'}}>Dashboard</h1>
+                 <Link className="btn btn-primary mx-4" to="/create">Create Clother</Link>
                 <div className="row m-3">
                     {clothers.map(clother => (
                         <div key={clother.id} className="card col-md-3 m-3" style={{width: 300}}>
@@ -37,6 +40,7 @@ function Dashboard()
                     ))}
                 </div>
             </div>
+        </Fragment>
     )
 }
 

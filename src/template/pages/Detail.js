@@ -54,7 +54,8 @@ function Detail() {
                     <tr>
                         <th>Function</th>
                         <td>
-                            <button className='btn btn-danger' onClick={deleteClother}>Delete</button>
+                            <button className='btn btn-danger m-2' onClick={deleteClother}>Delete</button>
+                            <Link className='btn btn-warning m-2' to={`/edit/${clothers[0].id}`}>Edit</Link>
                         </td>
                     </tr>
                 </table>
